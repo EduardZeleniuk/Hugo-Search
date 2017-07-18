@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+
+body {
+	background-color: #F1F1F1;
+	font: 14px Arial, sans-serif;
+	color: rgba(145,145,145,0.7);
+}
+
+.search-form {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+	position: relative;
+}
+	.search-form__input {
+		width: 100%;
+		padding: 0 90px 0 10px;
+		font-weight: 700;
+		border: none;
+		outline: none;
+		background: transparent;
+		font-size: 7em;
+		color: #ec5a62;
+		transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
+	}
+		.search-form__input::placeholder {
+			color: #c2c2c2;
+		}
+ 	.search-form__submit {
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		right: 0;
+		top: 50%;
+		outline: none;
+		background: transparent url('../img/magnifier.svg') no-repeat center center;    	
+		border: none;
+		transform-origin: 100% 50%;
+		transform: translate3d(0,-50%,0) scale(1);
+		transition: transform 0.3s;
+	} 
+	.search-form__submit:hover {
+		transform: translate3d(0,-50%,0) scale(1.1);
+	}
+	
+
+.content {
+	margin-top: 50px;
+	padding: 0 10%;
+	font-size: 0;
+}  
+	.aside {
+		display: inline-block;
+		font-size: 0.8rem;
+		width: 30%;
+	}
+		.aside__title {
+			font: 1.3em Arial,sans-serif;
+			font-weight: 800;
+			margin-bottom: 15px;
+			letter-spacing: 1px;
+			color: #c2c2c2;
+		}
+		.aside__list {
+			list-style: none;	
+		}
+		.aside:nth-child(2) {
+			margin: 0 5%;
+		}
+		.aside__item {
+			margin-top: 5px;
+			padding: 0.3em
+			border-radius: 5px;
+			background-color: #F1F1F1;
+		}
+		.aside__item:hover {
+			background-color: #E4E4E5;
+		}
+		.aside__link {
+			display: block;
+			text-decoration: none;
+			padding: 0.9em;
+			cursor: pointer;
+			border-radius: 5px;
+			background: rgba(118,117,128,0.05);
+			color: rgba(145,145,145,0.7);
+		}
+		.aside__link:hover {
+			color: #ec5a62;
+		}
+		.aside__link-title {
+			vertical-align: middle;
+			font-size: 1.1em;
+			display: inline-block;
+			margin: 0;
+			width: calc(100% - 70px);
+		}
+		.aside__img {
+			width: 50px;
+			margin-right:10px;
+			vertical-align: middle;
+		}
+		.aside__img_circle {
+			border-radius: 50%;
+		}
+
+@media screen and (max-width: 800px) {
+	.search-form__input {
+		padding: 0 40px 0 10px;
+		font-size: 2em;
+		transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
+	}
+	.aside {
+		width: 100%;
+		padding: 0 0 2em;
+	}
+	.aside:nth-child(2) {
+		margin: 0;
+	}
+	.search-form__submit {
+		transform: translate3d(0,-50%,0) scale3d(0.5,0.5,1);
+	}
