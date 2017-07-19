@@ -111,6 +111,11 @@ body {
 			border-radius: 50%;
 			overflow: hidden;
 		}
+		.section__img-width {
+			width: 100%;
+		}
+
+
 
 @media screen and (max-width: 800px) {
 	.search-form__input {
